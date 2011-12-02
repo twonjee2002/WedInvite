@@ -1,0 +1,53 @@
+#{extends 'main.html' /}
+#{set title:'Workshop : PicturePlay' /}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<a href="@{'/public/obj/index.html'}">Submit Final</a><br/>
+<table width="100%" height="50%" border="1" align="center" cellpadding="0.2" bgcolor="#996633" id="PicTable" summary="Page to select pictures">
+  <caption align="center">
+    Design
+  </caption>
+  <tr>
+  #{form @Application.uploadPicture(), enctype:'multipart/form-data'}
+
+       <td width="27%"><input name="data" type="file" />
+      <input type="submit" name="Submit" value="Submit" />
+      </td>
+#{/form}
+
+    <td width="30%"><a href="@{Application.getPicture(picture?.id)}"><img src="@{'/public/images/graph.jpg'}" alt="Picture1" name="Picture1" width="32" height="32" border="0" id="Picture1" style="background-color: #FF0000" /></a>
+    <input type="submit" name="Submit5" value="Submit" /></td>
+    <td width="43%" rowspan="4"><div align="center"><img src="" alt="" name="Preview" width="176" height="84" id="Preview" style="background-color: #CC3333" /></div></td>
+  </tr>
+  <tr>
+    <td><input name="data" type="file" />
+    <input type="submit" name="Submit2" value="Submit" /></td>
+    <td><a href="http://"><img src="@{'/public/images/pic1.jpg'}" alt="Picture2" name="Picture1" width="32" height="32" border="0" id="Picture1" style="background-color: #FF0000" /></a>
+    <input type="submit" name="Submit6" value="Submit" /></td>
+  </tr>
+  <tr>
+    <td><input name="pictureupload23" type="file" />
+    <input type="submit" name="Submit3" value="Submit" /></td>
+    <td><a href="http://"><img src="@{'/public/images/pic2.jpg'}" alt="Picture3" name="Picture1" width="32" height="32" border="0" id="Picture1" style="background-color: #FF0000" />
+      <input type="submit" name="Submit7" value="Submit" />
+    </a></td>
+  </tr>
+  <tr>
+    <td><input name="pictureupload24" type="file" />
+    <input type="submit" name="Submit4" value="Submit" /></td>
+    <td><a href="http://"><img src="@{'/public/images/pic3.jpg'}" alt="Picture4" name="Picture1" width="32" height="32" border="0" id="Picture1" style="background-color: #FF0000" />
+      <input type="submit" name="Submit8" value="Submit" />
+    </a></td>
+  </tr>
+</table>
+</body>
+</html>
+
+
